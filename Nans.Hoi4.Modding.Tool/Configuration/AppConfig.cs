@@ -1,4 +1,7 @@
 ﻿using Nans.Hoi4.Modding.Tool.Localization;
+using Nans.Hoi4.Modding.Tool.Logging;
+using Nans.Hoi4.Modding.Tool.Themes;
+using Newtonsoft.Json;
 using System;
 using System.Diagnostics;
 using System.Globalization;
@@ -11,19 +14,10 @@ namespace Nans.Hoi4.Modding.Tool.Configuration
     {
         public static AppConfig Instance { get; private set; } = new AppConfig();
 
-        public void Save()
-        {
-            throw new NotImplementedException();
-        }
+        public bool experimentalFeatures;
+        public double scale;
+        public ELanguage language;
 
-        public void Load()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void LoadDefaults()
-        {
-            throw new NotImplementedException();
-        }
+        public void Apply(AppConfig from, out bool hasToRestart)
     }
 }

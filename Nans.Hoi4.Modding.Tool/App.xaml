@@ -1,16 +1,24 @@
 ﻿<Application x:Class="Nans.Hoi4.Modding.Tool.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Nans.Hoi4.Modding.Tool_1._0"
-             StartupUri="MainWindow.xaml">
+             xmlns:local="clr-namespace:Nans.Hoi4.Modding.Tool"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             xmlns:xaml="clr-namespace:Nans.Hoi4.Modding.Tool.XAML"
+             xmlns:themes="clr-namespace:Nans.Hoi4.Modding.Tool.Themes"
+             xmlns:cfg="clr-namespace:Nans.Hoi4.Modding.Tool.Configuration">
     <Application.Resources>
         <ResourceDictionary>
+            <BitmapImage x:Key="app_Icon" UriSource="pack://application:,,,/Resources/Icons/app.ico"/>
+            <SolidColorBrush x:Key="AccentColor" Color="Green"/>
+            <SolidColorBrush x:Key="BackgroundColor" Color="White"/>
+            <SolidColorBrush x:Key="ForegroundColor" Color="Black"/>
+            <system:Double x:Key="Scale">1</system:Double>
+            <xaml:EnumItemsSource x:Key="ThemeType_Enums" Type="{x:Type themes:EThemeType}"/>
+            <BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
             <ResourceDictionary.MergedDictionaries>
-                <!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! -->
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
-                <!-- Theme setting -->
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Themes/Light.Blue.xaml" />
+                <!--<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Themes/Light.Green.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml"/>-->
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
